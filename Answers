@@ -1,5 +1,5 @@
 1. Find all the robots from Star Wars.
-SELECT * FROM robots WHERE source="Star Wars";
+SELECT * FROM robots WHERE source= 'Star Wars';
 
 2. Find the robot with an "anxious" personality.
 SELECT * FROM robots WHERE personality= 'anxious';
@@ -20,19 +20,19 @@ SELECT MIN(mins_to_play) as Boardgame_that_takes_least_amount_of_time_to_play FR
 SELECT MAX(minutes_required) as Recipe_that_takes_most_time_to_prepare FROM recipes;
 
 8. Find all the robots whose name starts with the letter M.
-SELECT * FROM robots where name LIKE 'M%';
+SELECT name FROM robots where name LIKE 'M%';
 
 9. Count the number of board games that can be played by 8 people.
 SELECT COUNT(id) FROM board_games WHERE max_players >= 8;
 
 10. Find all animals that are swimming and egg-laying.
-SELECT * FROM animals WHERE swimming= 'T' and egg_laying= 'T';
+SELECT name FROM animals WHERE swimming= 'T' and egg_laying= 'T';
 
 11. Find all animals that are swimming and egg-laying but not flying.
-SELECT * FROM animals WHERE swimming= 'T' and egg_laying= 'T' and flying= 'F';
+SELECT name FROM animals WHERE swimming= 'T' and egg_laying= 'T' and flying= 'F';
 
 12. Find the board game that supports the largest number of people.
-SELECT MAX(max_players) AS board_game_that_supports_largest_number_of_people FROM board_games;
+SELECT MAX(max_players) FROM board_games;
 
 
 
